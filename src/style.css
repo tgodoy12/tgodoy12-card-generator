@@ -1,1 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.card {
+  height: 25em;
+  min-width: 250px;
+}
+.rotate {
+  transform: rotate(180deg);
+}
