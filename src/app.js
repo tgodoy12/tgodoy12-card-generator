@@ -8,15 +8,18 @@ import "./assets/img/4geeks.ico";
 let palos = ["♠", "♥", "♣", "♦"];
 let cards = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "K", "Q", "J", "A"];
 
-let randomPalos = Math.floor(Math.random() * palos.length);
-let randomCards = Math.floor(Math.random() * cards.length);
-
 let paloElement = document.querySelectorAll(".palo");
 let numberElement = document.querySelector("#number");
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+window.onload = () => {
+  updateCard();
+  let button = document.querySelector("#generar-carta");
+  button.addEventListener("click", updateCard);
+};
+
+function updateCard() {
+  let randomPalos = Math.floor(Math.random() * palos.length);
+  let randomCards = Math.floor(Math.random() * cards.length);
   numberElement.textContent = cards[randomCards];
 
   paloElement.forEach(element => {
@@ -26,4 +29,4 @@ window.onload = function() {
     }
     element.textContent = palos[randomPalos];
   });
-};
+}
