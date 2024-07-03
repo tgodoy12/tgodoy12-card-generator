@@ -7,3 +7,7 @@
 .rotate {
   transform: rotate(180deg);
 }
+#number,
+.palo {
+  font-size: 5em;
+}
